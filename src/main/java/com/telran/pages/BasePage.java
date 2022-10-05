@@ -16,6 +16,7 @@ public class BasePage {
 
     public void click(WebElement element) {
         element.click();
+
     }
 
     public void type(WebElement element, String text){
@@ -53,5 +54,18 @@ public class BasePage {
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
         element.click();
     }
+
+    public void acceptAlert() {
+        driver.switchTo().alert().accept();
+
+    }
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

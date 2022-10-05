@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Collection;
-
 public class BookStorePage extends BasePage {
 
     public BookStorePage(WebDriver driver) {
@@ -15,7 +13,7 @@ public class BookStorePage extends BasePage {
     @FindBy(id = "login")
     WebElement loginButton;
 
-    public LoginPage clickOnLoginButton() {  // move to LoginPage
+    public LoginPage clickOnLoginButton() {
         click(loginButton);
         return new LoginPage(driver);
     }
@@ -34,5 +32,21 @@ public class BookStorePage extends BasePage {
     public String takeNameOfBook() {
         return nameOfBook.getText();
     }
+
+    public BookStorePage clickOnBookTitleLink() {
+        click(nameOfBook);
+        return this;
+    }
+    @FindBy(css =".text-right.fullButton")
+    WebElement addCollectionButton;
+
+    public BookStorePage clickOnAddBookButton() {
+        clickWithJSExecutor(addCollectionButton, 0, 300);
+        pause(500);
+        return this;
+    }
+
+
+
 }
 
