@@ -1,10 +1,12 @@
 package com.telran.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.File;
+import java.io.IOException;
 
 public class BasePage {
     WebDriver driver;
@@ -66,6 +68,4 @@ public class BasePage {
             e.printStackTrace();
         }
     }
-
-
 }

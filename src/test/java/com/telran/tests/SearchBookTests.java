@@ -16,7 +16,7 @@ public class SearchBookTests extends TestBase{
 
     @Test
     public void searchBookForGuestPositiveTest() {
-//        String text = "Git";   можно переменную и так объявить
+//        String text = "Git";   //the possibility is creating variable
         new BookStorePage(driver).typeInSearchBookInput(BookData.BOOK_Name);
         Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(BookData.BOOK_Name));
     }

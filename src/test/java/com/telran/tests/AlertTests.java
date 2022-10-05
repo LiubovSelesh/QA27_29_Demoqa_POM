@@ -15,7 +15,7 @@ public class AlertTests extends TestBase{
         new SidePanelPage(driver).selectAlerts();
     }
 
-    @Test                                                  //не сделала
+    @Test
     public void clickButtonToSeeAlertTest() {
         new AlertsPage(driver).tapAlertButton().acceptAlert();
     }
