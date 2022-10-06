@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class BasePage {
-    WebDriver driver;
+    public WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -68,4 +68,16 @@ public class BasePage {
             e.printStackTrace();
         }
     }
+
+    public void takeScreenshot(String pathToFile) {
+        File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File screenshot = new File(pathToFile);
+
+        try {
+            Files.copy(tmp, screenshot);
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

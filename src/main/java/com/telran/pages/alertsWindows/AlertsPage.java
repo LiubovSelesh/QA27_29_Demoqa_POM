@@ -1,13 +1,11 @@
-package com.telran.pages;
+package com.telran.pages.alertsWindows;
 
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import javax.swing.border.EmptyBorder;
-import java.util.Collection;
 
 public class AlertsPage extends BasePage {
 

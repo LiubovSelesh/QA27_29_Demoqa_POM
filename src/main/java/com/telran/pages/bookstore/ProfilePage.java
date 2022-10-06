@@ -1,6 +1,6 @@
-package com.telran.pages;
+package com.telran.pages.bookstore;
 
-import org.openqa.selenium.Alert;
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,6 +44,7 @@ public class ProfilePage extends BasePage {
     WebElement okButton;
 
     public ProfilePage deleteBook() {
+//        pause(500);
         trashList.get(0).click();
         pause(500);
         click(okButton);
