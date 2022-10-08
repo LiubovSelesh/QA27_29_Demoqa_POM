@@ -30,4 +30,22 @@ public class BrowserWindowsPage extends BasePage {
     public String getTextFromNewTab() {
         return sampleHeading.getText();
     }
+
+    @FindBy(id = "messageWindowButton")
+    WebElement messageWindowButton;
+
+    public BrowserWindowsPage clickOnNewWindowButton() {
+        click(messageWindowButton);
+        return this;
+    }
+
+    @FindBy(xpath = "//body")
+    WebElement newWindow;
+
+    public String getTextFromInNewTab() {
+        return newWindow.getText();
+    }
 }
+
+
+//body

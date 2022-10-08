@@ -29,4 +29,28 @@ public class ButtonsPage extends BasePage {
         actions.contextClick(rightClickBtn).perform();
         return this;
     }
+
+    @FindBy(xpath = "//button[.='Click Me']")
+    WebElement clickMe;
+
+    public ButtonsPage clickMe() {
+//        Actions actions = new Actions(driver);
+//        actions.contextClick(clickMe).perform();
+        click(clickMe);
+        return this;
+    }
+
+    @FindBy(id = "dynamicClickMessage")
+    WebElement dynamicClickMessage;
+
+    public String  getConfirmDynamicClickMassage() {
+
+        return dynamicClickMessage.getText();
+    }
 }
+
+
+
+
+
+// dynamicClickMessage

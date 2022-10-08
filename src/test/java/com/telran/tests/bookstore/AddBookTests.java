@@ -17,8 +17,7 @@ public class AddBookTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         new HomePage(driver).selectBookStoreApp();
-        new BookStorePage(driver).clickOnLoginButton() ;  // change class
-//        new LoginPage(driver).clickOnLoginButton();
+        new BookStorePage(driver).clickOnLoginButton() ;
         new LoginPage(driver).login(UserData.USER_Name, UserData.USER_Password);
 //        new ProfilePage(driver).verifyUserName(UserData.USER_Name);
 

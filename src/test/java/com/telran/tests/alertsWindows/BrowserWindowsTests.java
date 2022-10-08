@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class WindowsTests extends TestBase {
+public class BrowserWindowsTests extends TestBase {
 
     @BeforeMethod
     public void ensurePrecondition() {
@@ -20,6 +20,10 @@ public class WindowsTests extends TestBase {
         new BrowserWindowsPage(driver).clickOnNewTabButton();
         Assert.assertTrue(new BrowserWindowsPage(driver).getTextFromNewTab().contains("sample"));
     }
+    @Test
+    public void newWindowTest() {
+        new BrowserWindowsPage(driver).clickOnNewWindowButton();
+//        Assert.assertTrue(new BrowserWindowsPage(driver).getTextFromInNewTab().contains("Knowledge"));
+    }
 }
 
-//#doubleClickBtn
