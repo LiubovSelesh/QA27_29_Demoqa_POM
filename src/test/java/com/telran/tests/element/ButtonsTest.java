@@ -34,7 +34,5 @@ public class ButtonsTest extends TestBase {
         Assert.assertTrue(new ButtonsPage(driver).getConfirmDynamicClickMassage().contains("dynamic"));
 
 
-
-
     }
 }
