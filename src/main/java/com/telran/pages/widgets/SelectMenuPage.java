@@ -83,9 +83,31 @@ public class SelectMenuPage extends BasePage {
         }
         return this;
     }
+
+    @FindBy(id = "react-select-2-input")
+    WebElement selectOptionInput ;
+
+    public SelectMenuPage clickOnSelectValue(String text) {
+        selectOptionInput.sendKeys(text);
+        selectOptionInput.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    @FindBy(id = "react-select-3-input")
+    WebElement selectTitleInput ;
+
+    public SelectMenuPage clickOnSelectOne(String text) {
+        selectTitleInput.sendKeys(text);
+        selectTitleInput.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+
 }
 
 // (//div[@class=' css-1hwfws3'])[3]
 // driver.findElement(By.xpath(String.format("//*[text()='%s']", text))).click() - формат по которому
 // %s -string
 // %d - int
+
+// react-select-3-input

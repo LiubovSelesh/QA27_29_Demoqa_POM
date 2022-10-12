@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.util.Collection;
 import java.util.List;
 
 public class FramePage extends BasePage {
@@ -30,6 +31,8 @@ public class FramePage extends BasePage {
 
     public FramePage switchToFrameByIndex(int index) {
         driver.switchTo().frame(index);
+        String frameText = this.text.getText();
+        System.out.println("Text of the frame1 is " + frameText);
         return this;
     }
 
@@ -43,11 +46,16 @@ public class FramePage extends BasePage {
         driver.switchTo().frame(frame1);
         String frameText = this.text.getText();
         System.out.println("Text of the frame1 is " + frameText);
-
-//        Assert.assertTrue();
 //        driver.switchTo().defaultContent();
 
         return this;
+    }
+
+    @FindBy(id = "sampleHeading")
+    WebElement sampleHeading;
+
+    public String getTextInFrame1() {
+        return sampleHeading.getText();
     }
 }
 

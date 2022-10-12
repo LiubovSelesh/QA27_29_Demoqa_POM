@@ -16,6 +16,15 @@ public class SelectTests extends TestBase {
     }
 
     @Test
+    public void clickOnSelectValueTest() {
+        new SelectMenuPage(driver).clickOnSelectValue("Group 2, option 1");
+    }
+
+    @Test
+    public void clickOnSelectOneTest() {
+        new SelectMenuPage(driver).clickOnSelectOne("Mrs.");
+    }
+    @Test
     public void oldStileSelectTest() {
         new SelectMenuPage(driver).selectOldStyle("Blue");
 
