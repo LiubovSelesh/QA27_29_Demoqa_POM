@@ -5,14 +5,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
-import java.util.Collection;
 import java.util.List;
 
-public class FramePage extends BasePage {
+public class FramesPage extends BasePage {
 
-    public FramePage(WebDriver driver) {
+    public FramesPage(WebDriver driver) {
         super(driver);
 
     }
@@ -20,7 +18,7 @@ public class FramePage extends BasePage {
     @FindBy(tagName = "iframe")
     List<WebElement> frames;
 
-    public FramePage returnListOfFrames() {
+    public FramesPage returnListOfFrames() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Integer numberOfFrames = Integer.parseInt(js.executeScript("return window.length").toString());
         System.out.println("Number of Frames are " + numberOfFrames);
@@ -29,7 +27,7 @@ public class FramePage extends BasePage {
 
     }
 
-    public FramePage switchToFrameByIndex(int index) {
+    public FramesPage switchToFrameByIndex(int index) {
         driver.switchTo().frame(index);
         String frameText = this.text.getText();
         System.out.println("Text of the frame1 is " + frameText);
@@ -42,7 +40,7 @@ public class FramePage extends BasePage {
     @FindBy(id = "sampleHeading")
    WebElement text;
 
-    public FramePage switchToFrameById() {
+    public FramesPage switchToFrameById() {
         driver.switchTo().frame(frame1);
         String frameText = this.text.getText();
         System.out.println("Text of the frame1 is " + frameText);

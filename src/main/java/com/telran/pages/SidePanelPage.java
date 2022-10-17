@@ -2,9 +2,11 @@ package com.telran.pages;
 
 import com.telran.pages.alertsWindows.AlertsPage;
 import com.telran.pages.alertsWindows.BrowserWindowsPage;
-import com.telran.pages.alertsWindows.FramePage;
+import com.telran.pages.alertsWindows.FramesPage;
+import com.telran.pages.alertsWindows.NestedFramesPage;
 import com.telran.pages.bookstore.ProfilePage;
 import com.telran.pages.elements.ButtonsPage;
+import com.telran.pages.forms.PracticeFormPage;
 import com.telran.pages.widgets.SelectMenuPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -58,10 +60,25 @@ public class SidePanelPage extends BasePage {
     @FindBy(xpath = "//span[.='Frames']")
     WebElement frames;
 
-    public FramePage selectFrame() {
-        clickWithJSExecutor(frames, 0, 300);
-        return new FramePage(driver);
+    public FramesPage selectFrame() {
+        clickWithJSExecutor(frames,0,300);
+        return new FramesPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Nested Frames']")
+    WebElement nestedFrames;
+
+    public NestedFramesPage selectNestedFrames() {
+        clickWithJSExecutor(nestedFrames,0,300);
+        return new NestedFramesPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Practice Form']")
+    WebElement practiceForm;
+
+    public PracticeFormPage selectPracticeForm() {
+        click(practiceForm);
+        return new PracticeFormPage(driver);
     }
 }
 
-// "//span[.='Frames']"

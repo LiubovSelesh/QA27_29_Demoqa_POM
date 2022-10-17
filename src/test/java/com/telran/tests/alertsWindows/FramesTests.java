@@ -2,8 +2,7 @@ package com.telran.tests.alertsWindows;
 
 import com.telran.pages.HomePage;
 import com.telran.pages.SidePanelPage;
-import com.telran.pages.alertsWindows.BrowserWindowsPage;
-import com.telran.pages.alertsWindows.FramePage;
+import com.telran.pages.alertsWindows.FramesPage;
 import com.telran.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -18,19 +17,19 @@ public class FramesTests extends TestBase {
     }
     @Test
     public void framesTest() {
-        new FramePage(driver).returnListOfFrames();
+        new FramesPage(driver).returnListOfFrames();
 
     }
 
     @Test
     public void switchToFrameByIndexTest(){
-        new FramePage(driver).switchToFrameByIndex(1);
-        Assert.assertTrue(new FramePage(driver).getTextInFrame1().contains("sample"));
+        new FramesPage(driver).switchToFrameByIndex(1);
+        Assert.assertTrue(new FramesPage(driver).getTextInFrame1().contains("sample"));
 //
     }
 
     @Test
     public void switchToFrameByIdTest(){
-        new FramePage(driver).switchToFrameById();
+        new FramesPage(driver).switchToFrameById();
     }
 }
