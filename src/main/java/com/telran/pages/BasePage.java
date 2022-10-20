@@ -80,4 +80,29 @@ public class BasePage {
         }
     }
 
+    public void hideAdvertising() {
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('adplus-anchor').style.display='none'");
+    }
+
+    public void hideFooter() {
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("document.querySelector('footer').style.display='none'");
+    }
+
+    public void clickWithRectangle(WebElement element, int i, int j) {
+        Rectangle rectangle = element.getRect();
+
+        int offSetX = rectangle.getWidth() / i;
+        int offSetY = rectangle.getHeight() / i;
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        actions.moveByOffset(-offSetX, -offSetY).click().perform();
+    }
+
+    public void closeWindowBanner() {
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("document.getElementById('close-fixedban').style.display='none'");
+    }
 }

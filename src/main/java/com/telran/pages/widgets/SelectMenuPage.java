@@ -77,7 +77,7 @@ public class SelectMenuPage extends BasePage {
             multi.selectByIndex(2);
             multi.selectByIndex(3);
         }
-        final List<WebElement> options = multi.getAllSelectedOptions();
+         List<WebElement> options = multi.getAllSelectedOptions();
         for (WebElement el: options) {
             System.out.println(el.getText()  + " <-- multi");
         }
