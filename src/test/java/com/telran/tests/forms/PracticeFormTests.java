@@ -5,7 +5,7 @@ import com.telran.pages.HomePage;
 import com.telran.pages.SidePanelPage;
 import com.telran.pages.forms.PracticeFormPage;
 import com.telran.tests.TestBase;
-import com.telran.utils.DataProvides;
+import com.telran.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -38,7 +38,7 @@ public class PracticeFormTests extends TestBase {
         new PracticeFormPage(driver).closeModalDialog();
     }
 
-    @Test(dataProviderClass = DataProvides.class, dataProvider = "usingFile")
+    @Test(dataProviderClass = DataProviders.class, dataProvider = "usingFile")
     public void createNewStudentWithDataProviderTest(String firstName, String lastName, String email, String telPhone,
                                                      String birthDate,String file, String address) {
         new PracticeFormPage(driver)
@@ -57,9 +57,8 @@ public class PracticeFormTests extends TestBase {
         new PracticeFormPage(driver).closeModalDialog();
     }
 
-   }
+}
 
 
 
 
-//First level: К методу createNewStudentTest в классе PracticeFormTests подключить DataProvider

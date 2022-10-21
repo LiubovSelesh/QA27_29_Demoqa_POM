@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import javax.swing.*;
-import java.nio.channels.AcceptPendingException;
-
 public class MenuPage extends BasePage {
 
     public MenuPage(WebDriver driver) {

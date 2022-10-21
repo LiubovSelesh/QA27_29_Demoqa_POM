@@ -15,5 +15,6 @@ public class StudentData {
     public static final String STATE = "NCR";
     public static final String CITY = "Delhi";
 
-
 }
+
+//Создайте, пожалуйста, тест для страницы https://demoqa.com/text-box и параметризуйте тестовый метод, используя DataProvider
