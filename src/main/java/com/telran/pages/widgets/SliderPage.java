@@ -1,10 +1,13 @@
 package com.telran.pages.widgets;
 
 import com.telran.pages.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SliderPage extends BasePage {
     public SliderPage(WebDriver driver) {
@@ -19,11 +22,23 @@ public class SliderPage extends BasePage {
 
     public SliderPage moveSliderInHorizontalDirection() {
         Actions actions = new Actions(driver);
+        pause(1000);
+        int width = slider.getSize().getWidth();
 //move mouse to x offset 50 i.e. in horizontal direction
-        actions.dragAndDropBy(slider, 80, 0).perform();
-//        actions.moveToElement(slider, 90, 0).perform();
+//        actions.dragAndDropBy(slider, 80, 0).perform();
+        actions.moveToElement(slider, width/10, 0).click().perform();
 //        click(slider);
         return this;
+    }
+
+    public boolean isSliderValueDisplayed(int value) {
+        should(sliderValue, 10);
+        return driver.findElement(By.cssSelector("#sliderValue[value='" + value + "']")).isDisplayed();
+        //We can make ClickAndHold
+    }
+
+    public void should(WebElement element, int time) {
+        new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
     }
 }
 
