@@ -1,6 +1,7 @@
 package com.telran.pages.widgets;
 
 import com.telran.pages.BasePage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,6 +31,21 @@ public class MenuPage extends BasePage {
         actions.moveToElement(subSubList).perform();
 // move hover menu options "Sub Sub Item 2"
         actions.moveToElement(subSubItem2).perform();
+        return this;
+    }
+// This variant work if first variant doesn't work
+    public MenuPage selectSubMenu1() {
+        hideAdvertising();
+        hideFooter();
+        Actions actions = new Actions(driver);
+// move hover menu options ""Main Item 2"
+        actions.moveToElement(mainItem2).perform();
+// move hover menu options "Sub Sub List"
+        actions.moveToElement(subSubList).perform();
+        subSubList.sendKeys(Keys.SHIFT);
+// move hover menu options "Sub Sub Item 2"
+        actions.moveToElement(subSubItem2).perform();
+        subSubItem2.sendKeys(Keys.SHIFT);
         return this;
     }
 }
