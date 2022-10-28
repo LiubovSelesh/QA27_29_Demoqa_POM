@@ -14,14 +14,23 @@ public class TextBoxTest extends TestBase {
     @BeforeMethod
     public void ensurePrecondition(){
         new HomePage(driver).selectElements();
+        new SidePanelPage(driver).selectTextBox();
 
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "dataUserInTextBox")
     public void fillDataUserTestWithDataProvider(String name, String email,  String currentAddress, String permanentAddress) {
-        new SidePanelPage(driver).selectTextBox();
+
         new TextBoxPage(driver).fillDataUser(name, email, currentAddress,permanentAddress).submitButton();
         Assert.assertTrue(new TextBoxPage(driver).getTextFromData().contains("Current"));
+    }
+
+    @Test
+    public void keyBoardEventTest () {
+        new TextBoxPage(driver).keyBoardEvent();
+        Assert.assertEquals(new TextBoxPage(driver).getAttribute(), "Berlinerplatz 123, 123456 Berlin");
+
+
     }
 }
 

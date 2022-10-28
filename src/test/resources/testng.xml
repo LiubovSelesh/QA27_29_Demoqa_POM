@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tests" verbose="1" >
+    <test name="Tests" >
+        <classes>
+            <class name="com.telran.tests.bookstore.AddBookTests">
+                <methods>
+                    <exclude name=".*Positive.*"></exclude>
+                </methods>
+            </class>
+            <class name="com.telran.tests.element.LinksTests" />
+        </classes>
+    </test>
+
+</suite>

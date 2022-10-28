@@ -5,10 +5,7 @@ import com.telran.pages.alertsWindows.BrowserWindowsPage;
 import com.telran.pages.alertsWindows.FramesPage;
 import com.telran.pages.alertsWindows.NestedFramesPage;
 import com.telran.pages.bookstore.ProfilePage;
-import com.telran.pages.elements.BrokenLinksImagesPage;
-import com.telran.pages.elements.ButtonsPage;
-import com.telran.pages.elements.LinksPage;
-import com.telran.pages.elements.TextBoxPage;
+import com.telran.pages.elements.*;
 import com.telran.pages.forms.PracticeFormPage;
 import com.telran.pages.interactions.DragAndDropPage;
 import com.telran.pages.widgets.MenuPage;
@@ -135,6 +132,14 @@ public class SidePanelPage extends BasePage {
     public LinksPage selectLinks() {
         clickWithJSExecutor(links, 0, 500);
         return new LinksPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Upload and Download']")
+    WebElement upLodAndDownload;
+
+    public UpLodAndDownloadPage selectUploadDownload() {
+        clickWithJSExecutor(upLodAndDownload, 0, 500);
+        return new UpLodAndDownloadPage(driver);
     }
 }
 

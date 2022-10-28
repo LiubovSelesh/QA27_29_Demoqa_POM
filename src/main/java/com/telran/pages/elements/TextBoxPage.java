@@ -1,8 +1,10 @@
 package com.telran.pages.elements;
 
 import com.telran.pages.BasePage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class TextBoxPage extends BasePage {
@@ -47,5 +49,34 @@ public class TextBoxPage extends BasePage {
     public String getTextFromData() {
         return output.getText();
     }
+
+    public TextBoxPage keyBoardEvent() {
+//enter username;
+        type(userName, "Tom Tompson");
+//enter email;
+        type(userEmail, "tompson@gm.com");
+// enter current address;
+        typeWithJSExecutor(currentAddress, "Berlinerplatz 123, 123456 Berlin", 0, 200);
+// create object of the Action class;
+        Actions actions = new Actions(driver);
+//        pause(500);
+        actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
+// select current address;
+        actions.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
+// press the tab Key to switch focus to permanent address;
+        actions.sendKeys(Keys.TAB).perform();
+// past the current address in the permanent address field;
+        actions.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
+//        click(submit);
+//        System.out.println(currentAddress.getAttribute("value"));
+//        System.out.println(permanentAddress.getAttribute("value"));
+        return this;
+
+    }
+
+    public String getAttribute() {
+        return permanentAddress.getAttribute("value");
+    }
 }
 
+//output

@@ -45,7 +45,7 @@ public class BrokenLinksImagesPage extends BasePage {
     private void verifyLinks(String linksURL) {
         try {
             URL url = new URL(linksURL);
-            HttpURLConnection httpURLConnection= (HttpURLConnection) url.openConnection();
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setConnectTimeout(5000);
             httpURLConnection.connect();
             if (httpURLConnection.getResponseCode() >= 400) {
@@ -63,7 +63,6 @@ public class BrokenLinksImagesPage extends BasePage {
 
     public BrokenLinksImagesPage checkBrokenImages() {
         System.out.println("We have " + images.size() + " images");
-// check links of images
 
         for (int i = 0; i < images.size(); i++) {
             WebElement element = images.get(i);
@@ -71,7 +70,6 @@ public class BrokenLinksImagesPage extends BasePage {
             System.out.println("URL of images " + (i + 1) + " is: " + imageURL);
             verifyLinks(imageURL);
 
-//check to display image with JSExecutor
             try {
                 boolean imageDisplayed = (Boolean) ((JavascriptExecutor) driver)
                         .executeScript("return (typeof arguments[0].naturalWidth != undefined && arguments[0].naturalWidth > 0);", element);
@@ -88,4 +86,6 @@ public class BrokenLinksImagesPage extends BasePage {
         }
         return this;
     }
+
+
 }
