@@ -1,4 +1,4 @@
-package com.telran;
+package com.telran.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
