@@ -62,11 +62,11 @@ public class UpLodAndDownloadPage extends BasePage {
         int x = i.getWidth() / 3 + 250;
         int y = i.getHeight() / 10 + 420;
         robot.mouseMove(x, y);
-        pause(200);
+        pause(2000);
 
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        pause(5000);
+        pause(10000);
         robot.keyPress(KeyEvent.VK_ENTER);
 
         return this;
