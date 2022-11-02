@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TextBox" verbose="1" >
+    <test name="TextBox" >
+        <classes>
+            <class name="com.telran.tests.element.TextBoxTest" />
+        </classes>
+    </test>
+
+</suite>
