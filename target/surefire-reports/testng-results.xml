@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-02T20:52:56 CET" name="SmokyTest" finished-at="2022-11-02T20:53:08 CET" duration-ms="12475">
+  <suite started-at="2022-11-02T21:27:44 CET" name="SmokyTest" finished-at="2022-11-02T21:27:58 CET" duration-ms="14369">
     <groups>
     </groups>
-    <test started-at="2022-11-02T20:52:56 CET" name="AddBook" finished-at="2022-11-02T20:53:08 CET" duration-ms="12475">
+    <test started-at="2022-11-02T21:27:44 CET" name="AddBook" finished-at="2022-11-02T21:27:58 CET" duration-ms="14369">
       <class name="com.telran.tests.bookstore.AddBookTests">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:52:56 CET" name="init" finished-at="2022-11-02T20:53:02 CET" duration-ms="5848" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:44 CET" name="init" finished-at="2022-11-02T21:27:50 CET" duration-ms="6680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="startTest(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:53:02 CET" name="startTest" finished-at="2022-11-02T20:53:02 CET" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:50 CET" name="startTest" finished-at="2022-11-02T21:27:50 CET" duration-ms="19" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,19 +27,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method is-config="true" signature="ensurePrecondition()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:53:02 CET" name="ensurePrecondition" finished-at="2022-11-02T20:53:04 CET" duration-ms="2067" status="PASS">
+        <test-method is-config="true" signature="ensurePrecondition()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:50 CET" name="ensurePrecondition" finished-at="2022-11-02T21:27:53 CET" duration-ms="3053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ensurePrecondition -->
-        <test-method signature="searchBookForLoginUserPositiveTest()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:53:04 CET" name="searchBookForLoginUserPositiveTest" finished-at="2022-11-02T20:53:07 CET" duration-ms="3062" status="PASS">
+        <test-method signature="searchBookForLoginUserPositiveTest()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:53 CET" name="searchBookForLoginUserPositiveTest" finished-at="2022-11-02T21:27:56 CET" duration-ms="3026" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchBookForLoginUserPositiveTest -->
-        <test-method is-config="true" signature="deleteBookFromCollection()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:53:07 CET" name="deleteBookFromCollection" finished-at="2022-11-02T20:53:08 CET" duration-ms="1438" status="PASS">
+        <test-method is-config="true" signature="deleteBookFromCollection()[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:56 CET" name="deleteBookFromCollection" finished-at="2022-11-02T21:27:58 CET" duration-ms="1535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteBookFromCollection -->
-        <test-method is-config="true" signature="stopTest(org.testng.ITestResult)[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T20:53:08 CET" name="stopTest" finished-at="2022-11-02T20:53:08 CET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="stopTest(org.testng.ITestResult)[pri:0, instance:com.telran.tests.bookstore.AddBookTests@18ece7f4]" started-at="2022-11-02T21:27:58 CET" name="stopTest" finished-at="2022-11-02T21:27:58 CET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
