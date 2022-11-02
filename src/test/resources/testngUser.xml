@@ -7,8 +7,6 @@
                     <parameter name="name" value="MaxMiller"/>
                     <parameter name="password" value="Miller999!"/>
             </class>
-            <class name="com.telran.tests.element.TextBoxTest" />
-            <class name="com.telran.tests.element.ButtonsTest" />
         </classes>
     </test>
 
