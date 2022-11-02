@@ -4,7 +4,7 @@
     <test name="Element" >
         <classes>
             <class name="com.telran.tests.element.TextBoxTest" />
-            <class name="com.telran.tests.element.ButtonsTest" />
+<!--            <class name="com.telran.tests.element.ButtonsTest" />-->
         </classes>
     </test>
 
