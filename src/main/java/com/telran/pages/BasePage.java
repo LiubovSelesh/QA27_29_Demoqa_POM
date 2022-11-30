@@ -9,7 +9,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class BasePage {
-    public WebDriver driver;
+
+    protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
